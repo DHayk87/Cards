@@ -1,0 +1,120 @@
+*{margin: 0;padding: 0;box-sizing: border-box;text-decoration: none;}
+.container{max-width: 1300px;margin: 0 auto;}
+img{width: 100%;}
+
+.card{
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #333333;
+}
+.image{
+    width: 200px;
+    flex-shrink: 0;
+}
+.info{
+    width: calc(100% - 200px);
+    padding-left: 30px;
+    flex-shrink: 1;
+}
+.wraper{
+    padding: 10px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.row{
+    max-width: 100%;
+    height: 6px;
+    background-color: #8b008b;
+    flex-grow: 1;
+}
+.header{
+    color: #8b008b ;
+    font-size: 30px;
+}
+.stars{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.info-text {
+    padding: 20px 0;
+    font-size: 18px;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #8b008b;
+    color: #fff;
+    border: 1px solid currentColor;
+    border-radius: 30px;
+    transition: .7s;
+    font-weight: 600;
+}
+.btn:hover{
+    color: #8b008b;
+    border: 1px solid currentColor;
+    background-color: #fff;
+}
+.str{
+    width: 10px;
+    filter: invert(81%) sepia(71%) saturate(2978%) hue-rotate(360deg) brightness(105%) contrast(104%);
+}
+.down{
+    display: inline-block;
+    padding-left: 25px;
+}
+.down-image{
+    width: 20px;
+    filter: invert(12%) sepia(97%) saturate(3879%) hue-rotate(292deg) brightness(87%) contrast(117%);
+    vertical-align: middle;
+}
+@media screen and (481px <= width <= 768px) {
+    .image{
+        width: 30%;
+        margin: 0 auto;
+    }
+    .info{
+        width: 100%;
+    }
+}
+@media screen and (320px <= width <= 480px) {
+    .card{
+        padding: 20px;
+    }
+    .image{
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+    .info{
+        width: 100%;
+        padding-left: 0;
+    }
+    .wraper{
+        flex-wrap: wrap-reverse;
+    }
+    .row{
+        width: 100%;
+    }
+    .stars{
+        top:-15px;
+    }
+    .down{
+        margin-top: 15px;
+        padding-left: 10px;
+    }
+}
+@media screen and (max-width:320px) {
+    .card{
+        display: none;
+    }
+    .not-suported{
+        background-image: url(../image/browser_not_supported.webp);
+        background-size: 100%;
+        background-position: center;
+        height: 100vh;
+    }
+}
